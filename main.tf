@@ -29,14 +29,14 @@ resource "azurerm_app_service_plan" "appserviceplan" {
     size = "F1"
   }
 }
-resource "azurerm_app_service" "webapp" {
-  name                = "webapp-${random_integer.ri.result}"
+resource "azurerm_app_service" "ejWebapp" {
+  name                = "ejWebApp-${random_integer.ri.result}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   app_service_plan_id = azurerm_app_service_plan.appserviceplan.id
   source_control {
     repo_url           = "https://github.com/muyukha/azure-Hello-World"
-    branch             = "master"
+    branch             = "main"
     manual_integration = true
     use_mercurial      = false
   }
