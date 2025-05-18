@@ -1,0 +1,11 @@
+name: Test Runner
+
+on: workflow\_dispatch
+
+jobs:
+test:
+runs-on: \[self-hosted, odri]
+steps:
+\- run: echo "Runner is working!"
+
+github action can't run
