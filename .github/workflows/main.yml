@@ -8,4 +8,3 @@ runs-on: \[self-hosted, odri]
 steps:
 \- run: echo "Runner is working!"
 
-github action can't run
