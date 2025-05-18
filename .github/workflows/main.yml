@@ -1,14 +1,11 @@
-name: List Files
+name: Test Runner
 
 on:
   workflow_dispatch:
 
 jobs:
-  list-files:
-    runs-on: odri
+  test:
+    runs-on: [self-hosted, odri]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: List files in repo
-        run: ls -la
+      - name: Echo test
+        run: echo "Runner is working!"
